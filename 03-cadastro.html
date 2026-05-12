@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua conta</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <h3>Cadastro de novo usuário</h3>
+    
+    <form action="">
+        <label for="nome">nome completo</label>
+        <br>
+        <input 
+            type="text" 
+            name="nome" 
+            id="nome"
+            placeholder="digite seu nome "
+            required
+        >
+        <br><br>
+        <label for="email">email</label>
+        <br>
+        <input 
+            type="email" 
+            name="email" 
+            id="email"
+            placeholder="digite seu email"
+            required
+        >
+        <br><br>
+        <label for="senha">senha</label>
+        <br>
+        <input 
+            type="password" 
+            name="senha" 
+            id="senha"
+            placeholder="Digite sua senha"
+            required
+        >
+        
+        <br><br>
+        <label for="genero">Profissão</label>
+        <br>
+        <input type="radio" name="gnero" id="genero">
+        <label for="masculino">estudante</label>
+        
+        <input type="radio" name="genero" id="genero">
+        <label for="feminino">professor</label>
+        <br><br>
+        <select name="Trilha de Interesse" id="Trilha de Interesse">
+          
+          <option value="robotica basica">Robótica Básica</option>
+          <option value="programação">Programação</option>
+          <option value="Inteligencia artificial">Inteligência Artificial</option>
+        </select>
+        <button type="submit">cadastrar</button>
+    </form>    
+    <a href="02-index.html">index.html</a>
+</body>
+</html>
