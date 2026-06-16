@@ -4,115 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robomaker kits educacional</title>
+    <!--CSS interno-->
+    <style>
+        .titulo{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4C007D;
+        }
+
+        .body{
+            font-family: 'Seogoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        h1,h2,h3{
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            margin-bottom: 1rem;
+        }
+
+        a{
+        text-decoration: none;
+        color: inherit;
+        }
+
+        ul{
+        list-style: none;
+        }
+
+        .cabecalhoPrincipal{
+            background-color: aliceblue;
+            padding: 1.5rem 5%;
+            box-shadow: 0 3px 8px rgba( 0, 0, 0, 0,2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .listaNavegacao{
+            display: flex;
+            gap: 2rem;
+        }
+
+        .linNav{
+            font-weight: 500;
+            transition: color 0.5 ease;
+        }
+
+        .linNav:hover{
+            color: #4C007D;
+        }
+
+        .botaoPrincipal{
+            display: inline-block;
+            background-color: #4C007D;
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease ;
+        }
+
+        .botaoPrincipal:hover{
+            background-color: #4C007D;
+            color: #ffffff;
+        }
+
+        .container{
+            padding: 4rem 5%;
+        }
+
+        .tituloSecao{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .gradeProduto {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+
+        .cartaoProduto {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        width: 300px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: tranform 0.3s ease;
+        }
+
+        .cartaoProduto:hover {
+        transform: translateY(-5px);
+        }
+
+        .nomeProduto {
+        color: #333333;
+        }
+
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        .rodape{
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 3rem 5%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        }
+
+        .rodape h2,
+        .rodape h3{
+        color:#ffffff;
+        }
+    </style>
 </head>
-<!--cabeçalho-->
 <body>
-    <header>
+<!--cabeçalho-->
+    <header id="header" class="cabecalhoPrincipal">
             <div id="logo">
-               <h1>Robomaker kits educacionais</h1>
+            <h1 class="titulo">Robomaker kits educacionais</h1>
             </div>
             <nav>
-                <ul>
+                <ul class="listaNavegacao">
                     <li>
-                        <a href="#categorias">categorias</a>
+                        <a href="#categorias" class="linkNav">categorias</a>
                     </li>
                     <li>
-                        <a href="#produtos">produtos</a>
+                        <a href="#produtos" class="linkNav">produtos</a>
                     </li>
                     <li>
-                        <a href="#cursos">cursos</a>
+                        <a href="#cursos" class="linkNav">cursos</a>
                     </li>
                     <li>
-                        <a href="03-cadastro.html">cadastrar-se</a>
+                        <a href="03-cadastro.html" class="linkNav">cadastrar-se</a>
                     </li>
                 </ul>
             </nav>
     </header>
     <!--seção de categorias-->
     <main>
-        <section>
-            <h2>nossas Categorias</h2>
-            <ul>
-                <li>Placas Microcontroladoras</li>
-                <li>Sensores</li>
-                <li>Motores e Servos</li>
-                <li>Estrutura de Montagem</li>
+        <section id="hero" class="secaoHero" style="background-color: aliceblue; text-align: center; padding: 5rem 2rem; gorder bottom: 4px solid #d32f2f;">
+            <h2 style="font-size: 3rem; color: #1a1a1a;">nossas Categorias</h2>
+            <ul style="border-radius: 12px; box-shadow: 0 10px 20px rgba( 0, 0, 0, o.3);">
+                <li>✔️Placas Microcontroladoras</li>
+                <li>✔️Sensores</li>
+                <li>✔️Motores e Servos</li>
+                <li>✔️Estrutura de Montagem</li>
             </ul>
         </section>
         <!--Seção de Produtos-->
-        <section id="produtos">
-           <article>
-            <h3>Placas Microcontroladoras</h3>
-            <img src="images placa.jpg" alt="Placa micocontroladora">
+        <section id="produtos" class="container" style="background-color: aliceblue;">
+            <h2 class="tituloSecao"> Catálogo Instrumentos</h2>
+            <div class="gradeProdutos"
+           <article class="cartaoProdutos">
+            <h3 class="nomeProduto">Placas Microcontroladoras</h3>
+            <img
+            src="images placa.jpg" 
+            alt="Placa micocontroladora"
+            width="200"
+            style="border-radius: 4px; margin-bottom: 1rem;">
             <p><strong>Raspeberry Pi 3 Model B+ Anatel</strong></p>
             <p>Placa Microcontroladora essenscial para você</p>
-            <p>
+            <p style="color: #4C007D; font-weight: bold; font-size: 1.2rem;">
                 <em>preço: R$ 196,52 </em>
             </p>
-
+            <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+            </article>
+        
+            <article class="cartaoProdutos"
             <h3>Sensores</h3>
             <img src="sensor de movimento.webp" alt="sensor de movimento"
             width="290">
             <p><strong>Sensor de movimento HBO100</strong></p>
-            <p>sensor por preo baixo somente aqui</p>
-            <p>
+            <p>sensor por preço baixo somente aqui</p>
+            <p style="color: #4C007D; font-weight: bold; font-size: 1.2rem;">
                 <em>preço: R$ 59,38</em>
             </p>
+            <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+
+            </article>
+            <article
             <h3>Motores e Servos</h3>
-            <img src="motor e servo.webp" alt="mtores e servos">
+            <img src="motor e servo.webp" 
+            alt="mtores e servos"
+            width="200"
+            style="border-radius: 4px; margin-bottom: 1rem;">
+            
             <p><strong>Servo Motor Sg90 9g Tower Pro</strong></p>
             <p>servo motor de qualidade única, somente aqui</p>
-            <p>
+            <p style="color: #4C007D; font-weight: bold; font-size: 1.2rem;">
                 <em>preço: 19,90</em>
             </p>
+            <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+
             <h3>Estrutura de Montagem</h3>
-            <img src="estrutura de montagem.webp" alt="estrutura de imagem"
-            width="290">
+            <img src="estrutura de montagem.webp" 
+            alt="estrutura de imagem"
+            width="200">
             <p><strong>Kit braço Robótico Em Acrílico Com Parafusos-Robótica</strong></p>
-            <p>
+            <p  style="color: #4C007D; font-weight: bold; font-size: 1.2rem;">
                 <p>estrutura de monatgem perfeita para você</p>
                 <em>preço: 69,90</em>
             </p>
-           </article>
+            <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+            </article>
+        </div>
         </section>
+
         <!--Tabela de Cursos e Oficinas-->
         <section id="cursos">
             <h2>Oficinas Presenciais</h2>
             <table border="5">
-               <thead>
-                   <tr>
+                <thead>
+                    <tr>
                     <th>Curso</th>
                     <th>Duração</th>
                     <th>Valor</th>
-                   </tr>
-               </thead>
-               <tbody>
-                  <tr>
+                    </tr>
+                </thead>
+            <tbody>
+                    <tr>
                     <th>Lógica e Pensamento Computacional</th>
                     <th>40h</th>
                     <th>R$250,00</th>
-                  </tr>
-                   <tr>
+                    </tr>
+                    <tr>
                     <th>Robótica objetiva</th>
                     <th>30h</th>
                     <th>R$450,00</th>
-                  </tr>
-                   <tr>
+                    </tr>
+                    <tr>
                     <th>Robótica Industrial</th>
                     <th>60h</th>
                     <th>R$700,00</th>
-                  </tr>
-                   <tr>
+                    </tr>
+                    <tr>
                     <th>Total Informáticas</th>
                     <th>30h</th>
                     <th>R$159,90</th>
-                  </tr>
-                   <tr>
+                    </tr>
+                    <tr>
                     <th>Robótica Profissionalizante</th>
                     <th>4160h</th>
                     <th>R$1.761,00</th>
-                  </tr>
-               </tbody>
+                    </tr>
+            </tbody>
             </table>
 
         </section>
@@ -122,18 +273,18 @@
         <div>
         <h3>Siga-nos</h3>
         <div>
-          <a href="">
+        <a href="">
             <img src="intagram.png" alt="instagram" 
             width="130"/>
-          </a>
-          <a href="">
+        </a>
+        <a href="">
             <img src="Facebook_Logo_2023.png" alt="facebook" 
             width="140"/>
-          </a>
-          <a href="">
+        </a>
+        <a href="">
             <img src="youyubekk.avif" alt="youtube" 
             width="150"/>
-          </a>
+        </a>
         </div>
         <div>
             copyright &copy; 2026 RObomaker kits educacionais.
