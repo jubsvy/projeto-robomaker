@@ -3,60 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie sua conta</title>
+    <title>Crie sua conta — Robomaker</title>
+    <style>
+        :root{--purple:#6a00d6; --purple-dark:#4C007D; --bg:#f7f5ff; --muted:#666}
+        *{box-sizing:border-box; margin:0; padding:0}
+        body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:var(--bg); color:#222}
+        .page-header{background:linear-gradient(90deg,var(--purple),var(--purple-dark)); color:#fff; padding:1rem 5%; display:flex; justify-content:space-between; align-items:center}
+        .brand{font-weight:700}
+        nav a{color:rgba(255,255,255,0.95); text-decoration:none; font-weight:600}
+
+        .container{max-width:900px; margin:2.25rem auto; padding:0 1rem}
+        .card{background:#fff; border-radius:12px; padding:1.5rem; box-shadow:0 12px 30px rgba(106,0,214,0.08)}
+        .card h2{color:var(--purple-dark); margin-bottom:0.5rem}
+        form{display:grid; gap:0.75rem}
+        label{font-size:0.95rem; color:var(--muted)}
+        input[type="text"], input[type="email"], input[type="password"], select{
+            width:100%; padding:0.7rem; border:1px solid #e6e0f8; border-radius:8px; outline:none;
+        }
+        input:focus, select:focus{box-shadow:0 6px 18px rgba(106,0,214,0.08); border-color:var(--purple)}
+
+        .radios{display:flex; gap:1rem; align-items:center}
+        .radios label{margin-left:0.35rem; color:#444}
+
+        .actions{display:flex; gap:1rem; margin-top:0.5rem; align-items:center}
+        .btn-primary{background:linear-gradient(90deg,var(--purple),var(--purple-dark)); color:#fff; padding:0.6rem 1rem; border-radius:8px; border:none; cursor:pointer; font-weight:700}
+        .btn-secondary{background:transparent; border:1px solid #e6e0f8; padding:0.55rem 0.9rem; border-radius:8px}
+
+        .note{font-size:0.9rem; color:var(--muted); margin-top:0.5rem}
+
+        footer{margin-top:1.5rem; text-align:center; color:var(--muted); font-size:0.9rem}
+        @media (max-width:600px){ .radios{flex-direction:column; align-items:flex-start} }
+    </style>
 </head>
 <body>
-    <!--cabeçalho-->
-    <h3>Cadastro de novo usuário</h3>
-    
-    <form action="">
-        <label for="nome">nome completo</label>
-        <br>
-        <input 
-            type="text" 
-            name="nome" 
-            id="nome"
-            placeholder="digite seu nome "
-            required
-        >
-        <br><br>
-        <label for="email">email</label>
-        <br>
-        <input 
-            type="email" 
-            name="email" 
-            id="email"
-            placeholder="digite seu email"
-            required
-        >
-        <br><br>
-        <label for="senha">senha</label>
-        <br>
-        <input 
-            type="password" 
-            name="senha" 
-            id="senha"
-            placeholder="Digite sua senha"
-            required
-        >
-        
-        <br><br>
-        <label for="genero">Profissão</label>
-        <br>
-        <input type="radio" name="gnero" id="genero">
-        <label for="masculino">estudante</label>
-        
-        <input type="radio" name="genero" id="genero">
-        <label for="feminino">professor</label>
-        <br><br>
-        <select name="Trilha de Interesse" id="Trilha de Interesse">
-          
-          <option value="robotica basica">Robótica Básica</option>
-          <option value="programação">Programação</option>
-          <option value="Inteligencia artificial">Inteligência Artificial</option>
-        </select>
-        <button type="submit">cadastrar</button>
-    </form>    
-    <a href="02-index.html">index.html</a>
+    <header class="page-header">
+        <div class="brand">Robomaker • Kits Educacionais</div>
+        <nav><a href="02-index.html">Voltar ao catálogo</a></nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Cadastro de novo usuário</h2>
+            <p class="note">Crie sua conta para acessar cursos, kits e ofertas.</p>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+                </div>
+
+                <div>
+                    <label>Profissão</label>
+                    <div class="radios">
+                        <div>
+                            <input type="radio" id="prof-estudante" name="profissao" value="estudante" checked>
+                            <label for="prof-estudante">Estudante</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="prof-professor" name="profissao" value="professor">
+                            <label for="prof-professor">Professor</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="trilha">Trilha de interesse</label>
+                    <select id="trilha" name="trilha">
+                        <option value="robotica">Robótica Básica</option>
+                        <option value="programacao">Programação</option>
+                        <option value="ia">Inteligência Artificial</option>
+                    </select>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary" style="box-shadow:0 8px 24px rgba(106,0,214,0.12)">Cadastrar</button>
+                    <a href="02-index.html" class="btn-secondary">Cancelar</a>
+                </div>
+
+                <p class="note">Ao se cadastrar você concorda com nossos termos de uso.</p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        copyright © 2026 Robomaker kits educacionais
+    </footer>
 </body>
 </html>
